@@ -1120,7 +1120,157 @@ form input[type="submit"]:focus {
     font-weight: 400;
 }
 
-http://kute-themes.com/html/boutique/html/index.html
-https://template.hasthemes.com/noraure/noraure/index.html
-https://preview.hasthemes.com/xoss-preview/xoss/index.html
+/* Réduction de la taille du logo dans la navbar */
+.navbar-brand img {
+  width: 120px !important;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Couleurs principales */
+:root {
+  --turquoise: rgb(0, 168, 159);
+  --framboise: rgb(227, 0, 86);
+  --prune: rgb(126, 44, 92);
+}
+
+body {
+  color: var(--prune);
+}
+
+.header_section, .navbar, .custom_nav-container {
+  background: var(--turquoise) !important;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:focus, .navbar-nav .nav-link:hover {
+  color: var(--framboise) !important;
+}
+
+.btn1, .btn-box a, .option1, .option2, .btn, .nav_search-btn {
+  background: var(--framboise) !important;
+  color: #fff !important;
+  border: none;
+  transition: background 0.2s;
+}
+
+.btn1:hover, .btn-box a:hover, .option1:hover, .option2:hover, .btn:hover, .nav_search-btn:hover {
+  background: var(--prune) !important;
+  color: #fff !important;
+}
+
+.heading_container h2, .heading_container h3, .detail-box h5, .detail-box h6 {
+  color: var(--turquoise);
+}
+
+a {
+  color: var(--framboise);
+}
+a:hover {
+  color: var(--prune);
+}
+
+footer, .cpy_ {
+  background: var(--prune);
+  color: #fff;
+}
+
+footer a, .cpy_ a {
+  color: var(--turquoise);
+}
+footer a:hover, .cpy_ a:hover {
+  color: var(--framboise);
+}
+
+/* Adaptation des autres éléments principaux */
+.arrival_section, .product_section, .subscribe_section, .client_section, .why_section {
+  background: #f8f9fa;
+}
+
+.arrival_section h2, .product_section h2, .subscribe_section h3, .client_section h2, .why_section h2 {
+  color: var(--framboise);
+}
+
+/* Optionnel : bordures ou accents */
+.box, .option_container, .subscribe_form, .widget_menu {
+  border-color: var(--turquoise) !important;
+}
+
+/* Dropdown menu custom for navbar */
+.navbar-nav .dropdown:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0;
+  background: #fff;
+  border-radius: 0 0 8px 8px;
+  border: 2px solid var(--turquoise);
+  min-width: 260px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.navbar-nav .dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 1000;
+  float: left;
+  min-width: 260px;
+  padding: 0.5rem 0;
+  margin: 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 2px solid var(--turquoise);
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.navbar-nav .dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: var(--prune);
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar-nav .dropdown-item:hover, .navbar-nav .dropdown-item:focus {
+  color: #fff;
+  background-color: var(--turquoise);
+}
+
+.navbar-nav .dropdown-toggle::after {
+  display: inline-block;
+  margin-left: .255em;
+  vertical-align: .255em;
+  content: "";
+  border-top: .3em solid;
+  border-right: .3em solid transparent;
+  border-bottom: 0;
+  border-left: .3em solid transparent;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-nav .dropdown-menu {
+    position: static;
+    float: none;
+    min-width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+  }
+}
 

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qui sommes-nous?</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg custom_nav-container">
+      <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Logo Mission Locale" style="width:120px;max-width:100%;height:auto;"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="qui-sommes-nous.html" id="navbarDropdownQui" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Qui sommes-nous ?</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownQui">
+              <a class="dropdown-item" href="qui-sommes-nous.html#missions">Nos missions, notre méthode, nos valeurs</a>
+              <a class="dropdown-item" href="qui-sommes-nous.html#equipe">Notre équipe</a>
+              <a class="dropdown-item" href="qui-sommes-nous.html#conseil">Le conseil d'administration</a>
+              <a class="dropdown-item" href="qui-sommes-nous.html#subsides">Subsides et adhésion</a>
+              <a class="dropdown-item" href="qui-sommes-nous.html#rapports">Rapports d'activité, statuts, comptes annuels</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="accompagnement.html" id="navbarDropdownAccomp" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accompagnement</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownAccomp">
+              <a class="dropdown-item" href="accompagnement.html#individuel">Accompagnement individuel</a>
+              <a class="dropdown-item" href="accompagnement.html#social">Accompagnement social</a>
+              <a class="dropdown-item" href="accompagnement.html#numerique">Espace public numérique</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="biotiful.html">Biotiful</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="container mt-5 mb-5">
+    <h1 class="mb-4" style="color:var(--turquoise)">Qui sommes-nous ?</h1>
+    <p style="font-size:1.2rem;">La <strong>Mission Locale pour l’Emploi de Saint-Gilles</strong> accompagne les chercheurs d’emploi dans leur parcours d’insertion professionnelle. Notre équipe pluridisciplinaire vous accueille, vous informe et vous oriente vers des solutions adaptées à vos besoins.</p>
+    <h2 class="mt-5" style="color:var(--framboise)">Nos valeurs</h2>
+    <ul style="font-size:1.1rem;">
+      <li>Respect et écoute de chaque personne</li>
+      <li>Accompagnement personnalisé</li>
+      <li>Promotion de l’égalité des chances</li>
+      <li>Engagement pour l’insertion durable</li>
+    </ul>
+    <h2 class="mt-5" style="color:var(--framboise)">Notre équipe</h2>
+    <p>Des conseillers, formateurs et partenaires engagés à vos côtés pour vous aider à construire votre avenir professionnel.</p>
+    <a href="contact.html" class="btn btn-turquoise mt-4">Nous contacter</a>
+  </main>
+  <footer class="footer mt-5" style="background:var(--prune);color:#fff;padding:30px 0 10px 0;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mb-3 mb-md-0">
+          <img src="images/logo.png" alt="Logo Mission Locale" style="width:90px;vertical-align:middle;"> <span style="font-size:1.2rem;font-weight:bold;margin-left:10px;">Mission Locale pour l’Emploi de Saint-Gilles</span>
+          <p class="mt-3 mb-1">28 White tower, Street Name, 1060 Saint-Gilles, Bruxelles</p>
+          <p class="mb-1">Tél : +32 2 123 45 67</p>
+          <p class="mb-1">Email : info@mlsg.be</p>
+        </div>
+        <div class="col-md-6 text-md-right">
+          <p class="mb-2">Suivez-nous :</p>
+          <a href="https://www.facebook.com/Mission-Locale-de-Saint-Gilles-145536338873577/?fref=ts" target="_blank" style="color:var(--turquoise);font-size:1.5rem;margin-right:10px;"><i class="fa fa-facebook"></i></a>
+          <a href="https://www.youtube.com/channel/UC-_2jO4Bw7PqM5k00sGFdgA" target="_blank" style="color:var(--turquoise);font-size:1.5rem;margin-right:10px;"><i class="fa fa-youtube"></i></a>
+          <a href="https://www.instagram.com/missionlocaledesaintgilles/" target="_blank" style="color:var(--turquoise);font-size:1.5rem;"><i class="fa fa-instagram"></i></a>
+          <p class="mt-3 mb-0" style="font-size:0.95rem;">© 2025 Mission Locale Saint-Gilles. Design inspiré par <a href="https://mlsg.be/" style="color:var(--turquoise);text-decoration:underline;">mlsg.be</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/custom.js"></script>
+  <script>
+    // Animation fade-in sur les sections principales
+    $(document).ready(function(){
+      $("main, .services_section, .slider_section, .product_section, .arrival_section, .why_section, .client_section").css("opacity",0).animate({opacity:1},1200);
+      $(".btn-turquoise, .btn1, .btn-box a, .option1, .option2, .btn, .nav_search-btn").hover(function(){
+        $(this).addClass("shadow-lg");
+      },function(){
+        $(this).removeClass("shadow-lg");
+      });
+    });
+  </script>
+  <style>
+    .btn-turquoise, .btn1, .btn-box a, .option1, .option2, .btn, .nav_search-btn {
+      background: var(--turquoise) !important;
+      color: #fff !important;
+      border: none;
+      transition: background 0.2s;
+    }
+    .btn-turquoise:hover, .btn1:hover, .btn-box a:hover, .option1:hover, .option2:hover, .btn:hover, .nav_search-btn:hover {
+      background: var(--prune) !important;
+      color: #fff !important;
+    }
+  </style>
+</body>
+</html>
