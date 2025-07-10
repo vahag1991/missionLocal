@@ -16,37 +16,43 @@
     <!-- header section start -->
     <header class="header_section">
       <div class="container">
-        <nav class="navbar navbar-expand-lg custom_nav-container">
-          <a class="navbar-brand" href="index.html"><img width="120" src="images/logo.png" alt="Logo Mission Locale" /></a>
+         <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html"><img width="250" src="images/logo.png" alt="#" /></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class=""> </span>
+          <span class=""> </span>
           </button>
-          <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-              <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="qui-sommes-nous.html" id="navbarDropdownQui" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Qui sommes-nous ?</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownQui">
-                  <a class="dropdown-item" href="qui-sommes-nous.html#missions">Nos missions, notre méthode, nos valeurs</a>
-                  <a class="dropdown-item" href="qui-sommes-nous.html#equipe">Notre équipe</a>
-                  <a class="dropdown-item" href="qui-sommes-nous.html#conseil">Le conseil d'administration</a>
-                  <a class="dropdown-item" href="qui-sommes-nous.html#subsides">Subsides et adhésion</a>
-                  <a class="dropdown-item" href="qui-sommes-nous.html#rapports">Rapports d'activité, statuts, comptes annuels</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="accompagnement.html" id="navbarDropdownAccomp" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accompagnement</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownAccomp">
-                  <a class="dropdown-item" href="accompagnement.html#individuel">Accompagnement individuel</a>
-                  <a class="dropdown-item" href="accompagnement.html#social">Accompagnement social</a>
-                  <a class="dropdown-item" href="accompagnement.html#numerique">Espace public numérique</a>
-                </div>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="biotiful.html">Biotiful</a></li>
-              <li class="nav-item active"><a class="nav-link" href="contact.html">Contact <span class="sr-only">(current)</span></a></li>
-            </ul>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+             <ul class="navbar-nav">
+                <li class="nav-item active">
+                   <a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle" href="qui-sommes-nous.html" id="navbarDropdownQui" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Qui sommes-nous ?</a>
+                   <div class="dropdown-menu" aria-labelledby="navbarDropdownQui">
+                      <a class="dropdown-item" href="qui-sommes-nous.html#missions">Nos missions, notre méthode, nos valeurs</a>
+                      <a class="dropdown-item" href="qui-sommes-nous.html#equipe">Notre équipe</a>
+                      <a class="dropdown-item" href="qui-sommes-nous.html#conseil">Le conseil d'administration</a>
+                      <a class="dropdown-item" href="qui-sommes-nous.html#subsides">Subsides et adhésion</a>
+                      <a class="dropdown-item" href="qui-sommes-nous.html#rapports">Rapports d'activité, statuts, comptes annuels</a>
+                   </div>
+                </li>
+                <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle" href="accompagnement.html" id="navbarDropdownAccomp" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accompagnement</a>
+                   <div class="dropdown-menu" aria-labelledby="navbarDropdownAccomp">
+                      <a class="dropdown-item" href="accompagnement.html#individuel">Accompagnement individuel</a>
+                      <a class="dropdown-item" href="accompagnement.html#social">Accompagnement social</a>
+                      <a class="dropdown-item" href="accompagnement.html#numerique">Espace public numérique</a>
+                   </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="biotiful.html">Biotiful</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item">
+                  
+                </li>
+             
+             </ul>
           </div>
-        </nav>
+         </nav>
       </div>
     </header>
     <!-- end header section -->
@@ -164,19 +170,39 @@
   <!-- footer end -->
   <!-- jQuery, Popper, Bootstrap JS -->
   <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/custom.js"></script>
   <script>
-    // Animation fade-in sur les sections principales
     $(document).ready(function(){
-      $("main, .contact_section, .inner_page_head").css("opacity",0).animate({opacity:1},1200);
-      $(".btn-turquoise, .btn1, .btn-box a, .option1, .option2, .btn, .nav_search-btn").hover(function(){
+      // Fade-in général
+      $("main, .contact-section, .form-section").css("opacity",0).animate({opacity:1},1200);
+      // Ombre portée sur les boutons au survol
+      $(".btn-turquoise, .btn1, .btn, .nav_search-btn").hover(function(){
         $(this).addClass("shadow-lg");
       },function(){
         $(this).removeClass("shadow-lg");
       });
+      // Slide-up sur titres principaux
+      $("h1, h2, h3").css({position:"relative",top:"30px",opacity:0}).each(function(i,el){
+        $(el).delay(300*i).animate({top:0,opacity:1},700);
+      });
+      // Animation shake sur le formulaire en cas d'erreur
+      $("form").on("invalid", function(){
+        $(this).addClass("animate__animated animate__shakeX");
+        setTimeout(()=>{$(this).removeClass("animate__animated animate__shakeX")},1000);
+      });
+      // Focus animé sur les champs
+      $("form input, form textarea").focus(function(){
+        $(this).css({'box-shadow':'0 0 0 2px var(--turquoise)','transition':'box-shadow 0.3s'});
+      }).blur(function(){
+        $(this).css({'box-shadow':'none'});
+      });
+      // Animation sur les infos de contact
+      $(".contact-section .info, .contact-section .contact-info").css({opacity:0,top:"20px",position:"relative"}).each(function(i,el){
+        $(el).delay(300*i).animate({opacity:1,top:0},600);
+      });
     });
   </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </body>
 </html>

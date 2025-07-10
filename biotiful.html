@@ -6,41 +6,48 @@
   <title>Biotiful</title>
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/png">
 </head>
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg custom_nav-container">
-      <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Logo Mission Locale" style="width:120px;max-width:100%;height:auto;"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="qui-sommes-nous.html" id="navbarDropdownQui" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Qui sommes-nous ?</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownQui">
-              <a class="dropdown-item" href="qui-sommes-nous.html#missions">Nos missions, notre méthode, nos valeurs</a>
-              <a class="dropdown-item" href="qui-sommes-nous.html#equipe">Notre équipe</a>
-              <a class="dropdown-item" href="qui-sommes-nous.html#conseil">Le conseil d'administration</a>
-              <a class="dropdown-item" href="qui-sommes-nous.html#subsides">Subsides et adhésion</a>
-              <a class="dropdown-item" href="qui-sommes-nous.html#rapports">Rapports d'activité, statuts, comptes annuels</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="accompagnement.html" id="navbarDropdownAccomp" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accompagnement</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownAccomp">
-              <a class="dropdown-item" href="accompagnement.html#individuel">Accompagnement individuel</a>
-              <a class="dropdown-item" href="accompagnement.html#social">Accompagnement social</a>
-              <a class="dropdown-item" href="accompagnement.html#numerique">Espace public numérique</a>
-            </div>
-          </li>
-          <li class="nav-item active"><a class="nav-link" href="biotiful.html">Biotiful</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+  <header class="header_section">
+    <div class="container">
+       <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html"><img width="250" src="images/logo.png" alt="#" /></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class=""> </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+             <ul class="navbar-nav">
+                <li class="nav-item active">
+                   <a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle" href="qui-sommes-nous.html" id="navbarDropdownQui" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Qui sommes-nous ?</a>
+                   <div class="dropdown-menu" aria-labelledby="navbarDropdownQui">
+                      <a class="dropdown-item" href="qui-sommes-nous.html#missions">Nos missions, notre méthode, nos valeurs</a>
+                      <a class="dropdown-item" href="qui-sommes-nous.html#equipe">Notre équipe</a>
+                      <a class="dropdown-item" href="qui-sommes-nous.html#conseil">Le conseil d'administration</a>
+                      <a class="dropdown-item" href="qui-sommes-nous.html#subsides">Subsides et adhésion</a>
+                      <a class="dropdown-item" href="qui-sommes-nous.html#rapports">Rapports d'activité, statuts, comptes annuels</a>
+                   </div>
+                </li>
+                <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle" href="accompagnement.html" id="navbarDropdownAccomp" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accompagnement</a>
+                   <div class="dropdown-menu" aria-labelledby="navbarDropdownAccomp">
+                      <a class="dropdown-item" href="accompagnement.html#individuel">Accompagnement individuel</a>
+                      <a class="dropdown-item" href="accompagnement.html#social">Accompagnement social</a>
+                      <a class="dropdown-item" href="accompagnement.html#numerique">Espace public numérique</a>
+                   </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="biotiful.html">Biotiful</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item">
+                </li>
+             </ul>
+          </div>
+       </nav>
+    </div>
+ </header>
   <main class="container mt-5 mb-5">
     <h1 class="mb-4" style="color:var(--turquoise)">Biotiful</h1>
     <p style="font-size:1.2rem;">Depuis 2019, <strong>Biotiful</strong> est le projet d’économie sociale de la Mission Locale pour l’Emploi de Saint-Gilles. Il vise l’insertion professionnelle par l’alimentation durable et la valorisation des circuits courts.</p>
@@ -75,16 +82,202 @@
   <script src="js/bootstrap.js"></script>
   <script src="js/custom.js"></script>
   <script>
-    // Animation fade-in sur les sections principales
     $(document).ready(function(){
+      // Fade-in général
       $("main, .services_section, .slider_section, .product_section, .arrival_section, .why_section, .client_section").css("opacity",0).animate({opacity:1},1200);
+      // Ombre portée sur les boutons au survol
       $(".btn-turquoise, .btn1, .btn-box a, .option1, .option2, .btn, .nav_search-btn").hover(function(){
         $(this).addClass("shadow-lg");
       },function(){
         $(this).removeClass("shadow-lg");
       });
+      // Animation soulignement progressif sur les liens de navbar
+      $(".navbar-nav .nav-link").hover(function(){
+        $(this).css({"text-decoration": "underline","text-underline-offset": "6px","transition": "text-underline-offset 0.3s"});
+      },function(){
+        $(this).css({"text-decoration": "none"});
+      });
+      // Animation typing sur le titre principal
+      var $title = $("h1").first();
+      var text = $title.text();
+      $title.html("");
+      var i = 0;
+      function typeLetter() {
+        if(i < text.length) {
+          $title.append($('<span>').text(text[i]).css({opacity:0,display:'inline-block'}).animate({opacity:1},60));
+          i++;
+          setTimeout(typeLetter, 60);
+        }
+      }
+      typeLetter();
+      // Animation arc-en-ciel sur le titre
+      setInterval(function(){
+        $title.find('span').each(function(i,el){
+          $(el).css('color',`hsl(${(i*30+Date.now()/10)%360},80%,60%)`);
+        });
+      },60);
+      // Zoom + rotation sur le logo au survol
+      $(".navbar-brand img, footer img").hover(function(){
+        $(this).css({'transform':'scale(1.15) rotate(-8deg)','transition':'transform 0.5s cubic-bezier(.68,-0.55,.27,1.55)'});
+      },function(){
+        $(this).css({'transform':'scale(1) rotate(0deg)','transition':'transform 0.5s cubic-bezier(.68,-0.55,.27,1.55)'});
+      });
+      // Effet pulse et glow sur chaque point clé de la liste
+      $('main ul li').hover(function(){
+        $(this).addClass('animate__animated animate__pulse').css({'box-shadow':'0 0 16px 4px var(--turquoise)','background':'rgba(64,224,208,0.08)'});
+      },function(){
+        $(this).removeClass('animate__animated animate__pulse').css({'box-shadow':'none','background':'none'});
+      });
+      // Apparition en cascade de la liste
+      $('main ul li').css({opacity:0,top:'20px',position:'relative'}).each(function(i,el){
+        $(el).delay(400*i+800).animate({opacity:1,top:0},600);
+      });
+      // Animation de background sur le bouton
+      $('.btn-turquoise, .btn1, .btn').hover(function(){
+        $(this).css({'box-shadow':'0 0 20px 4px var(--turquoise)','background':'linear-gradient(90deg, var(--turquoise), var(--framboise), var(--prune))','transition':'background 0.5s, box-shadow 0.5s'});
+      },function(){
+        $(this).css({'box-shadow':'none','background':'var(--turquoise)','transition':'background 0.5s, box-shadow 0.5s'});
+      });
+      // Surbrillance du footer au scroll
+      $(window).on('scroll', function(){
+        if($(window).scrollTop() + $(window).height() > $(document).height() - 120) {
+          $('footer').addClass('footer-glow');
+        } else {
+          $('footer').removeClass('footer-glow');
+        }
+      });
+      // Glow sur les icônes réseaux sociaux
+      $('.fa-facebook, .fa-youtube, .fa-instagram').hover(function(){
+        $(this).css({'filter':'drop-shadow(0 0 12px var(--turquoise))','transform':'scale(1.25) rotate(-8deg)','transition':'all 0.3s'});
+      },function(){
+        $(this).css({'filter':'none','transform':'scale(1) rotate(0deg)','transition':'all 0.3s'});
+      });
+      // Animation de fond arc-en-ciel sur le header
+      setInterval(function(){
+        var deg = (Date.now()/40)%360;
+        $('.header_section').css('background',`linear-gradient(${deg}deg, var(--turquoise), var(--framboise), var(--prune))`);
+      },60);
+      // Animation shake sur le bouton au clic
+      $('.btn-turquoise, .btn1, .btn').click(function(){
+        $(this).addClass('animate__animated animate__tada');
+        setTimeout(()=>{$(this).removeClass('animate__animated animate__tada')},1000);
+      });
+      // Animation rebond sur le logo-service si présent
+      $('.logo-service img').hover(function(){
+        $(this).addClass('animate__animated animate__bounce');
+      },function(){
+        $(this).removeClass('animate__animated animate__bounce');
+      });
+      // --- ANIMATIONS NATURE ET ELEMENTS FLOTTANTS ---
+      // Création d'un canvas pour la scène animée
+      var $canvas = $('<canvas id="natureCanvas" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:0;pointer-events:none;"></canvas>');
+      $('body').prepend($canvas);
+      var canvas = $canvas[0];
+      var ctx = canvas.getContext('2d');
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      resizeCanvas();
+      $(window).on('resize', resizeCanvas);
+      // --- Définition des éléments flottants (papillons, oiseaux, feuilles, nuages) ---
+      var elements = [];
+      var colors = ['#7ed957','#f7e967','#f9a602','#00bfff','#ff69b4'];
+      function random(min,max){return Math.random()*(max-min)+min;}
+      // Générer des papillons
+      for(let i=0;i<8;i++){
+        elements.push({type:'butterfly',x:random(0,window.innerWidth),y:random(0,window.innerHeight/2),vx:random(0.3,1.2),vy:random(-0.2,0.2),size:random(30,60),angle:random(0,Math.PI*2),color:colors[Math.floor(Math.random()*colors.length)]});
+      }
+      // Générer des oiseaux
+      for(let i=0;i<5;i++){
+        elements.push({type:'bird',x:random(0,window.innerWidth),y:random(0,window.innerHeight/3),vx:random(1,2),vy:random(-0.1,0.1),size:random(40,70),angle:random(0,Math.PI*2),color:'#333'});
+      }
+      // Générer des feuilles
+      for(let i=0;i<12;i++){
+        elements.push({type:'leaf',x:random(0,window.innerWidth),y:random(0,window.innerHeight),vx:random(-0.2,0.2),vy:random(0.3,1),size:random(20,40),angle:random(0,Math.PI*2),color:'#228B22'});
+      }
+      // Générer des nuages
+      for(let i=0;i<4;i++){
+        elements.push({type:'cloud',x:random(0,window.innerWidth),y:random(0,window.innerHeight/4),vx:random(0.1,0.3),vy:0,size:random(120,200),color:'#fff'});
+      }
+      // Animation de la scène
+      function drawButterfly(e){
+        ctx.save();
+        ctx.translate(e.x,e.y);
+        ctx.rotate(Math.sin(Date.now()/400+e.x/100)*0.3);
+        ctx.beginPath();
+        ctx.moveTo(0,0);
+        ctx.bezierCurveTo(-e.size/2,-e.size/2, -e.size,-e.size/4, 0,0);
+        ctx.bezierCurveTo(e.size/2,-e.size/2, e.size,-e.size/4, 0,0);
+        ctx.fillStyle=e.color;
+        ctx.globalAlpha=0.7;
+        ctx.fill();
+        ctx.globalAlpha=1;
+        ctx.restore();
+      }
+      function drawBird(e){
+        ctx.save();
+        ctx.translate(e.x,e.y);
+        ctx.rotate(Math.sin(Date.now()/300+e.x/80)*0.2);
+        ctx.beginPath();
+        ctx.moveTo(0,0);
+        ctx.quadraticCurveTo(e.size/2,-e.size/3,e.size,0);
+        ctx.quadraticCurveTo(e.size/2,e.size/3,0,0);
+        ctx.fillStyle=e.color;
+        ctx.globalAlpha=0.8;
+        ctx.fill();
+        ctx.globalAlpha=1;
+        ctx.restore();
+      }
+      function drawLeaf(e){
+        ctx.save();
+        ctx.translate(e.x,e.y);
+        ctx.rotate(e.angle+Math.sin(Date.now()/500+e.x/50)*0.5);
+        ctx.beginPath();
+        ctx.ellipse(0,0,e.size/2,e.size/4,0,0,Math.PI*2);
+        ctx.fillStyle=e.color;
+        ctx.globalAlpha=0.6;
+        ctx.fill();
+        ctx.globalAlpha=1;
+        ctx.restore();
+      }
+      function drawCloud(e){
+        ctx.save();
+        ctx.translate(e.x,e.y);
+        ctx.globalAlpha=0.3;
+        ctx.beginPath();
+        ctx.arc(0,0,e.size/2,0,Math.PI*2);
+        ctx.arc(-e.size/3,10,e.size/3,0,Math.PI*2);
+        ctx.arc(e.size/3,10,e.size/3,0,Math.PI*2);
+        ctx.fillStyle=e.color;
+        ctx.fill();
+        ctx.globalAlpha=1;
+        ctx.restore();
+      }
+      function animateNature(){
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+        for(let e of elements){
+          if(e.type==='butterfly')drawButterfly(e);
+          if(e.type==='bird')drawBird(e);
+          if(e.type==='leaf')drawLeaf(e);
+          if(e.type==='cloud')drawCloud(e);
+          // Mouvement
+          e.x+=e.vx;
+          e.y+=e.vy+Math.sin(Date.now()/600+e.x/100)*0.2;
+          if(e.type==='leaf')e.angle+=0.01;
+          // Recyclage hors écran
+          if(e.x>canvas.width+100) e.x=-100;
+          if(e.x<-100) e.x=canvas.width+100;
+          if(e.y>canvas.height+100) e.y=-100;
+          if(e.y<-100) e.y=canvas.height+100;
+        }
+        requestAnimationFrame(animateNature);
+      }
+      animateNature();
+      // --- FIN ANIMATIONS NATURE ---
     });
   </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <style>
     .btn-turquoise, .btn1, .btn-box a, .option1, .option2, .btn, .nav_search-btn {
       background: var(--turquoise) !important;
@@ -95,6 +288,42 @@
     .btn-turquoise:hover, .btn1:hover, .btn-box a:hover, .option1:hover, .option2:hover, .btn:hover, .nav_search-btn:hover {
       background: var(--prune) !important;
       color: #fff !important;
+    }
+    /* Dégradé animé sur le header */
+    .header_section {
+      background: linear-gradient(270deg, var(--turquoise), var(--framboise), var(--prune));
+      background-size: 600% 600%;
+      animation: gradientBG 12s ease infinite;
+    }
+    @keyframes gradientBG {
+      0% {background-position:0% 50%}
+      50% {background-position:100% 50%}
+      100% {background-position:0% 50%}
+    }
+    /* Zoom image */
+    img, .img-zoom {
+      transition: transform 0.4s cubic-bezier(.25,.8,.25,1);
+    }
+    /* Bulle réseaux sociaux */
+    .fa-facebook, .fa-youtube, .fa-instagram {
+      transition: transform 0.3s cubic-bezier(.68,-0.55,.27,1.55);
+      display: inline-block;
+    }
+    /* Surbrillance footer */
+    .footer-glow {
+      box-shadow: 0 0 40px 8px var(--turquoise);
+      transition: box-shadow 0.5s;
+    }
+    /* Arc-en-ciel sur le titre */
+    h1 span {
+      transition: color 0.2s;
+    }
+    /* Glow sur les points clés */
+    main ul li {
+      transition: box-shadow 0.3s, background 0.3s;
+      border-radius: 12px;
+      margin-bottom: 8px;
+      padding: 6px 10px;
     }
   </style>
 </body>

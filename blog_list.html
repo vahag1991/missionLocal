@@ -10,7 +10,7 @@
       <meta name="keywords" content="" />
       <meta name="description" content="" />
       <meta name="author" content="" />
-      <link rel="shortcut icon" href="images/favicon.png" type="">
+      <link rel="shortcut icon" href="images/favicon.png" type="image/png">
       <title>Famms - Fashion HTML Template</title>
       <!-- bootstrap core css -->
       <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -33,25 +33,29 @@
                   </button>
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                      <ul class="navbar-nav">
-                        <li class="nav-item">
-                           <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        <li class="nav-item active">
+                           <a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item dropdown">
-                           <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Pages <span class="caret"></span></a>
-                           <ul class="dropdown-menu">
-                              <li><a href="about.html">About</a></li>
-                              <li><a href="testimonial.html">Testimonial</a></li>
-                           </ul>
+                           <a class="nav-link dropdown-toggle" href="qui-sommes-nous.html" id="navbarDropdownQui" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Qui sommes-nous ?</a>
+                           <div class="dropdown-menu" aria-labelledby="navbarDropdownQui">
+                              <a class="dropdown-item" href="qui-sommes-nous.html#missions">Nos missions, notre méthode, nos valeurs</a>
+                              <a class="dropdown-item" href="qui-sommes-nous.html#equipe">Notre équipe</a>
+                              <a class="dropdown-item" href="qui-sommes-nous.html#conseil">Le conseil d'administration</a>
+                              <a class="dropdown-item" href="qui-sommes-nous.html#subsides">Subsides et adhésion</a>
+                              <a class="dropdown-item" href="qui-sommes-nous.html#rapports">Rapports d'activité, statuts, comptes annuels</a>
+                           </div>
                         </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="product.html">Products</a>
+                        <li class="nav-item dropdown">
+                           <a class="nav-link dropdown-toggle" href="accompagnement.html" id="navbarDropdownAccomp" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accompagnement</a>
+                           <div class="dropdown-menu" aria-labelledby="navbarDropdownAccomp">
+                              <a class="dropdown-item" href="accompagnement.html#individuel">Accompagnement individuel</a>
+                              <a class="dropdown-item" href="accompagnement.html#social">Accompagnement social</a>
+                              <a class="dropdown-item" href="accompagnement.html#numerique">Espace public numérique</a>
+                           </div>
                         </li>
-                        <li class="nav-item active">
-                           <a class="nav-link" href="blog_list.html">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="biotiful.html">Biotiful</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                         <li class="nav-item">
                            <a class="nav-link" href="#">
                               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
@@ -74,6 +78,18 @@
                                        <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
                                           c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
                                     </g>
+                                 </g>
+                                 <g>
+                                 </g>
+                                 <g>
+                                 </g>
+                                 <g>
+                                 </g>
+                                 <g>
+                                 </g>
+                                 <g>
+                                 </g>
+                                 <g>
                                  </g>
                                  <g>
                                  </g>
@@ -233,6 +249,20 @@
                            </g>
                            <g>
                            </g>
+                           <g>
+                           </g>
+                           <g>
+                           </g>
+                           <g>
+                           </g>
+                           <g>
+                           </g>
+                           <g>
+                           </g>
+                           <g>
+                           </g>
+                           <g>
+                           </g>
                         </svg>
                      </div>
                      <div class="detail-box">
@@ -350,6 +380,18 @@
                            </g>
                            <g>
                            </g>
+                           <g>
+                           </g>
+                           <g>
+                           </g>
+                           <g>
+                           </g>
+                           <g>
+                           </g>
+                           <g>
+                           </g>
+                           <g>
+                           </g>
                         </svg>
                      </div>
                      <div class="detail-box">
@@ -427,11 +469,28 @@
       <!-- footer end -->
       <!-- jQery -->
       <script src="js/jquery-3.4.1.min.js"></script>
-      <!-- popper js -->
-      <script src="js/popper.min.js"></script>
-      <!-- bootstrap js -->
       <script src="js/bootstrap.js"></script>
-      <!-- custom js -->
       <script src="js/custom.js"></script>
+      <script>
+        $(document).ready(function(){
+          // Fade-in général
+          $("main, .blog-section, .blog_list").css("opacity",0).animate({opacity:1},1200);
+          // Ombre portée sur les boutons au survol
+          $(".btn-turquoise, .btn1, .btn, .nav_search-btn").hover(function(){
+            $(this).addClass("shadow-lg");
+          },function(){
+            $(this).removeClass("shadow-lg");
+          });
+          // Slide-up sur titres principaux
+          $("h1, h2, h3").css({position:"relative",top:"30px",opacity:0}).each(function(i,el){
+            $(el).delay(300*i).animate({top:0,opacity:1},700);
+          });
+          // Animation sur les cartes/articles
+          $(".blog-section .card, .blog_list .blog-card").css({opacity:0,top:"40px",position:"relative"}).each(function(i,el){
+            $(el).delay(200*i).animate({opacity:1,top:0},600);
+          });
+        });
+      </script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
    </body>
 </html>
